@@ -16,9 +16,9 @@ public class NestedLoop {
 		
 		int dan = 2;
 		int times = 1;
-		while(dan<=9) {
+		while(dan <= 9) {
 			times = 1;
-			while(times<=9) {
+			while(times <= 9) {
 				System.out.println(dan + "x" + times + "=" + dan * times);
 				times++;
 			}
