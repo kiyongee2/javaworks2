@@ -1,4 +1,4 @@
-package loopexample;
+package nestedloop;
 
 public class NestedLoop {
 

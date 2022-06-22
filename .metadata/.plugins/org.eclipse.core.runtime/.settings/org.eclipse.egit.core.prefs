@@ -1,4 +1,4 @@
-GitRepositoriesView.GitDirectories=C\:\\java_workspace\\BankApp\\.git;
-GitRepositoriesView.GitDirectories.relative=BankApp\\.git;
+GitRepositoriesView.GitDirectories=D\:\\javaWorks\\.git;D\:\\javaWorks\\BankApp\\.git;
+GitRepositoriesView.GitDirectories.relative=.git;BankApp\\.git;
 core_autoIgnoreDerivedResources=false
 eclipse.preferences.version=1

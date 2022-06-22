@@ -1,4 +1,4 @@
-package loopexample;
+package whileif;
 
 public class WhileIfBreak {
 

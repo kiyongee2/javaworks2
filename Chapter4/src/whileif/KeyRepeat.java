@@ -1,4 +1,4 @@
-package loopexample;
+package whileif;
 
 import java.util.Scanner;
 
