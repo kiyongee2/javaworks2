@@ -10,7 +10,7 @@ public class Student2 {
 	*/
 	public static Subject[] subjectArray;
 	
-	public Student(String name, int id){
+	public Student2(String name, int id){
 		studentName = name;
 		studentID = id;
 		subjectArray = new Subject[3];
@@ -24,7 +24,7 @@ public class Student2 {
 	public void addSubject(String name, int score) {
 		Subject subject = new Subject(name);
 		subject.setSubjectName(name);
-		subject.setScore(score);
+		subject.setScorePoint(score);
 		for(int i=0; i<subjectArray.length; i++) {
 			subjectArray[i] = subject;
 		}
@@ -47,7 +47,7 @@ public class Student2 {
 		for(int i=0; i<subjectArray.length; i++) {
 			Subject s = subjectArray[i];
 			if(s !=null)
-				System.out.println(studentName + " 학생의 "+ s.getSubjectName()+" 점수는 "+ s.getScore());
+				System.out.println(studentName + " 학생의 "+ s.getSubjectName()+" 점수는 "+ s.getScorePoint());
 		}
 		
 	}
