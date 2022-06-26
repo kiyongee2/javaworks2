@@ -26,8 +26,9 @@ public class Banking {
 					money = scanner.nextInt();
 					if(money < 1000) {
 						System.out.println("초기 입금액은 1000원 이상입니다. 다시 입력하세요");
-					}
-					else {
+					}else if(money < 0) {
+						System.out.println("음수를 입력할 수 없습니다.. 다시 입력하세요");
+					}else {
 						balance += money;
 						System.out.printf("%,d원 정상처리 되었습니다.\n", money);
 						break;
@@ -38,10 +39,11 @@ public class Banking {
 				while(true) {
 					System.out.println("출금액> ");
 					money = scanner.nextInt();
-					if(money > balance || money < 0) {
+					if(money > balance) {
 						System.out.println("잔액이 부족합니다. 다시 입력하세요");
-					}
-					else {
+					}else if(money < 0) {
+						System.out.println("음수를 입력할 수 없습니다.. 다시 입력하세요");
+					}else {
 						balance -= money;
 						System.out.printf("%,d원 정상처리 되었습니다.\n", money);
 						break;

@@ -5,6 +5,7 @@ import java.util.ArrayList;
 public class ArrayListTest {
 
 	public static void main(String[] args) {
+		
 		ArrayList<String> list = new ArrayList<String>();
 		list.add("aaa");
 		list.add("bbb");
@@ -13,14 +14,20 @@ public class ArrayListTest {
 		for(int i=0; i<list.size(); i++) {
 			System.out.println(list.get(i));
 		}
+		
 		list.add("ddd");  
+		
 		list.remove(1);  //삭제
+		
 		list.add(2, "kkk");  //특정 위치에 삽입
-		System.out.println("-----");
+		
+		System.out.println("----------------");
+		
 		for(String s : list) {
 			System.out.println(s);
 		}
 
+		//Integer형 리스트
 		ArrayList<Integer> numbers = new ArrayList<>();
 			numbers.add(10);
 			numbers.add(20);
@@ -30,7 +37,5 @@ public class ArrayListTest {
 			Integer num = numbers.get(i);
 			System.out.println(num);
 		}
-
 	}
-
 }

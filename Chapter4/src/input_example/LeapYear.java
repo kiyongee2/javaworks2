@@ -5,6 +5,7 @@ import java.util.Scanner;
 public class LeapYear {
 
 	public static void main(String[] args) {
+		//윤년 - 4년 마다 오고, 100년 단위는 아니나 400년 단위로 온다.
 		//int year = 2021; 
 		Scanner sc = new Scanner(System.in);
 		
@@ -17,7 +18,6 @@ public class LeapYear {
 		else {
 			System.out.println(year + "년은 평년입니다.");
 		}
-		
 		sc.close();
 	}
 }
