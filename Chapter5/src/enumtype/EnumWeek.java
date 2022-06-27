@@ -9,7 +9,7 @@ public class EnumWeek {
 		Week today = null;
 		
 		Calendar cal = Calendar.getInstance();
-		int week = cal.get(Calendar.DAY_OF_WEEK);
+		int week = cal.get(Calendar.DAY_OF_WEEK);  
 		//System.out.println(week);
 		
 		switch(week) {
@@ -27,7 +27,7 @@ public class EnumWeek {
 			today = Week.FRIDAY; break;
 		case 7:
 			today = Week.SATURDAY; break;
-		}
+		}//switch 닫기
 		
 		System.out.println("오늘 요일 : " +  today);
 		
@@ -36,5 +36,5 @@ public class EnumWeek {
 		}else {
 			System.out.println("열심히 프로그램 코딩합니다.");
 		}
-	}
+	}//main 닫기
 }
