@@ -48,9 +48,9 @@ public class BirthdayTest2 {
 
 	public static void main(String[] args) {
 		BirthDay1 day = new BirthDay1();
-		day.setYear(2010);
+		day.setYear(2020);
 		day.setMonth(2);
-		day.setDay(30);
+		day.setDay(29);
 		
 		day.showInfo();
 		

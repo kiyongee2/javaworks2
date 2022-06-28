@@ -6,9 +6,6 @@ public class CarFactory {
 	private CarFactory() {}
 	
 	public static CarFactory getInstance() {
-		if(instance==null) {
-			instance = new CarFactory();
-		}
 		return instance;
 	}
 	

@@ -1,12 +1,15 @@
 package staticexample;
 
 public class Student {
-	static int serialNum = 10000; //기준값
-	int studentID;
-	String studentName;
+	static int serialNum = 1000; //기준값
+	int id;
+	String name;
 	
-	public Student() {
-		serialNum++;
-		studentID = serialNum;
+	public void setName(String name) {
+		this.name = name;
+	}
+	
+	public String getName() {
+		return name;
 	}
 }

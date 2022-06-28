@@ -26,4 +26,8 @@ public class Student2 {
 	public void setStudentName(String studentName) {
 		this.studentName = studentName;
 	}
+	
+	public String getStudentName() {
+		return studentName;
+	}
 }

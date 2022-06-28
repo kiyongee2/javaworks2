@@ -1,4 +1,4 @@
-package enumtype;
+package builtinclass;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
