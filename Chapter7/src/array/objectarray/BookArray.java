@@ -24,15 +24,15 @@ public class BookArray {
 			library[i].showBookInfo();
 		}
 		
-//		library[0] = new Book("미생1", "윤태호");  //수정 저장
-//	
-//		for(Book book : library) {  //향상된 for
-//			book.showBookInfo();
-//		}
-//		
-//		for(i=0; i<library.length; i++) {
-//			System.out.println(library[i]);
-//		}
+		library[0] = new Book("미생1", "윤태호");  //수정 저장(메모리 변경)
+	
+		for(Book book : library) {  //향상된 for
+			book.showBookInfo();
+		}
+		
+		for(i=0; i<library.length; i++) {
+			System.out.println(library[i]);
+		}
 
 	}
 

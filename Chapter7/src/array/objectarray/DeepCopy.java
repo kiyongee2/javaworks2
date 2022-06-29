@@ -1,6 +1,6 @@
 package array.objectarray;
 
-public class ObjectCopy2 {
+public class DeepCopy {
 
 	public static void main(String[] args) {
 		Book[] bookArray1 = new Book[3];
@@ -10,10 +10,12 @@ public class ObjectCopy2 {
 		bookArray1[1] = new Book("아리랑2", "조정래");
 		bookArray1[2] = new Book("아리랑3", "조정래");
 		
+		//bookArray2[] 새로 생성
 		bookArray2[0] = new Book();
 		bookArray2[1] = new Book();
 		bookArray2[2] = new Book();
 		
+		//bookArray1을 bookArray2에 저장
 		for(int i=0; i<bookArray1.length; i++) {
 			bookArray2[i].setBookName(bookArray1[i].getBookName());
 			bookArray2[i].setAuthor(bookArray1[i].getAuthor());

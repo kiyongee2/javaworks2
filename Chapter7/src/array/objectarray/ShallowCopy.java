@@ -1,6 +1,6 @@
 package array.objectarray;
 
-public class ObjectCopy1 {
+public class ShallowCopy {
 
 	public static void main(String[] args) {
 		Book[] bookArray1 = new Book[3];
@@ -17,6 +17,7 @@ public class ObjectCopy1 {
 			bookArray2[i].showBookInfo();
 		}
 		
+		//bookArray1[0] 수정
 		bookArray1[0].setBookName("미생");
 		bookArray1[0].setAuthor("윤태호");
 		

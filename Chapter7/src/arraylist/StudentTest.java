@@ -1,19 +1,17 @@
 package arraylist;
 
 public class StudentTest {
+
 	public static void main(String[] args) {
-		Student studentLee = new Student(1001, "Lee");
-		studentLee.addSubject("국어", 100);
-		studentLee.addSubject("수학", 53);
-		studentLee.addSubject("과학", 80);
+		Student park = new Student(1001, "박마늘");
+		Student lee = new Student(1002, "이양파");
 		
-		Student studentPark = new Student(1002, "Park");
-		studentPark.addSubject("국어", 88);
-		studentPark.addSubject("수학", 70);
-		studentPark.addSubject("영어", 93);
+		park.koreanSubject("국어", 90);
+		park.mathSubject("수학", 80);
+		park.showInfo();
 		
-		studentLee.showStudentInfo();
-		System.out.println("===============================================");
-		studentPark.showStudentInfo();	
+		lee.koreanSubject("국어", 75);
+		lee.mathSubject("수학", 60);
+		lee.showInfo();
 	}
 }

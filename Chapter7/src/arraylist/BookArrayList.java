@@ -6,9 +6,13 @@ import array.objectarray.Book;
 public class BookArrayList {
 
 	public static void main(String[] args) {
+		
 		ArrayList<Book> library = new ArrayList<Book>();
+		
 		Book book1 = new Book("¾Æ¸®¶û1", "Á¶Á¤·¡");
+		Book book2 = new Book("¾Æ¸®¶û2", "Á¶Á¤·¡");
 		library.add(book1);
+		library.add(book2);
 		/*
 		library.add(new Book("¾Æ¸®¶û1", "Á¶Á¤·¡"));
 		library.add(new Book("¾Æ¸®¶û2", "Á¶Á¤·¡"));
