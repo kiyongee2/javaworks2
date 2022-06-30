@@ -12,7 +12,7 @@ public class SupersonicAirplane extends Airplane{
 			System.out.println("초음속 비행합니다.");
 		}
 		else {
-			super.fly();
+			super.fly();  //Airplane fly() 상속
 		}
 	}
 }

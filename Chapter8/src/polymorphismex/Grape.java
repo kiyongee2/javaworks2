@@ -1,7 +1,7 @@
 package polymorphismex;
 
-public class Apple extends Fruit{
-	public Apple() {
+public class Grape extends Fruit{
+	public Grape() {
 		name = "»ç°ú";
 		price = 2000;
 		freshness = 90;

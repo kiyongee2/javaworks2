@@ -1,19 +1,19 @@
 package customermanage;
 
 public class VIPCustomer extends Customer{
-	int agentID;
-	double saleRatio;
+	//필드
+	int agentID;          //상담원 ID
+	double saleRatio;     //구매 할인율
 	
 	public VIPCustomer() {
 		//super();
 		customerGrade = "VIP";
-		bonusRatio = 0.05;
-		saleRatio = 0.1;
-		System.out.println("VIPCustomer() 생성자 호출");
+		bonusRatio = 0.05;    //5%
+		saleRatio = 0.1;      //10%
 	}
 	
 	public VIPCustomer(int customerID, String customerName, int agentID) {
-		super(customerID, customerName);
+		super(customerID, customerName);  //Customer 필드 상속
 		this.agentID = agentID;
 		customerGrade = "VIP";
 		bonusRatio = 0.05;
@@ -24,17 +24,15 @@ public class VIPCustomer extends Customer{
 		this.agentID = agentID;
 	}
 	
-	public int getAgentID() {
-		return agentID;
+	@Override
+	public int calcPrice(int price) {
+		//가격 = 가격 - (가격 x 구매할인율)
+		price -= (int)(price * saleRatio);
+		bonusPoint += (int) (price * bonusRatio);
+		return price;
 	}
 	
 	public String showCustomerInfo() {
-		return super.showCustomerInfo() + "담당 상담원 아이디는 " + agentID + "입니다.";
-	}
-	
-	@Override
-	public int calcPrice(int price) {
-		bonusPoint += price * bonusRatio;
-		return price-(int)(price*saleRatio);
+		return super.showCustomerInfo() + "\n담당 상담원 아이디는 " + agentID + "입니다.";
 	}
 }

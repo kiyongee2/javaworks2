@@ -8,6 +8,7 @@ public class DmbCellPhoneTest {
 		System.out.println("모델 : "+dmbPhone.model);
 		System.out.println("색상 : "+dmbPhone.color);
 		System.out.println("채널 : "+dmbPhone.channel);
+		
 		dmbPhone.powerOn();
 		dmbPhone.bell();
 		dmbPhone.sendVoice("여보세요");
@@ -18,5 +19,4 @@ public class DmbCellPhoneTest {
 		dmbPhone.changeChannelDmb(12);
 		dmbPhone.turnOffDmb();
 	}
-
 }

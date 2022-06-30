@@ -48,9 +48,9 @@ public class AnimalTest {
 				
 		System.out.println("=====moveAnimal() 메서드 호출=====");
 		AnimalTest aTest = new AnimalTest();
-		aTest.moveAnimal(new Human());
-		aTest.moveAnimal(new Tiger());
-		aTest.moveAnimal(new Eagle());
+		aTest.moveAnimal(human);
+		aTest.moveAnimal(tiger);
+		aTest.moveAnimal(eagle);
 	}
 
 	public void moveAnimal(Animal animal) {

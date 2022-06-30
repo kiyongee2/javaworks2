@@ -36,9 +36,10 @@ class Eagle extends Animal{
 	}
 }
 
-public class AnimalMain {
+public class AnimalMain2 {
 	public static void main(String[] args) {
 		ArrayList<Animal> animalList = new ArrayList<>();
+		
 		animalList.add(new Human());
 		animalList.add(new Tiger());
 		animalList.add(new Eagle());

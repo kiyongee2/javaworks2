@@ -1,17 +1,19 @@
 package customermanage;
 
 public class GoldCustomer extends Customer{
-	double saleRatio;
+	//필드
+	double saleRatio;   //구매 할인율
 	
 	public GoldCustomer(int customerID, String customerName) {
-		super(customerID, customerName);
+		super(customerID, customerName);  //Customer 필드 상속
 		customerGrade = "GOLD";
 		bonusRatio = 0.02;
 		saleRatio = 0.1;
 	}
 	
 	public int calcPrice(int price) {
-		bonusPoint += price * bonusRatio;
-		return price - (int)(price*saleRatio);
+		price -= (int)(price*saleRatio);
+		bonusPoint += (int)(price * bonusRatio);
+		return price;
 	}
 }

@@ -1,15 +1,17 @@
 package customermanage;
 
-public class CustomerTest2 {
+public class CustomerTest2{
 
 	public static void main(String[] args) {
-		VIPCustomer Kim = new VIPCustomer();
-		Kim.setCustomerID(10020);
-		Kim.setCustomerName("±èÀ¯½Å");
-		Kim.bonusPoint = 1000;
-		Kim.agentID = 78;
+		//°í°´ °´Ã¼ »ý¼º
+		Customer customerLee = new Customer(10010, "ÀÌ¼ø½Å");
+		VIPCustomer customerKing = new VIPCustomer(10020, "¼¼Á¾´ë¿Õ", 1446);
 		
-		System.out.println(Kim.showCustomerInfo());
+		int price = 10000;
+		customerLee.calcPrice(price);
+		customerKing.calcPrice(price);
+		
+		System.out.println(customerLee.showCustomerInfo());
+		System.out.println(customerKing.showCustomerInfo());
 	}
-
 }

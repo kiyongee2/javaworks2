@@ -1,23 +1,23 @@
 package customermanage;
 
 public class Customer {
-	private int customerID;
-	private String customerName;
-	protected String customerGrade;
-	int bonusPoint;
-	double bonusRatio;
+	//필드
+	private int customerID;           //고객 아이디
+	private String customerName;      //고객 이름
+	protected String customerGrade;   //고객 등급
+	int bonusPoint;					  //보너스 포인트
+	double bonusRatio;                //보너스 적립율
 	
 	public Customer() {
-		customerGrade = "SILVER";
-		bonusRatio = 0.01;
-		System.out.println("Customer() 생성자 호출");
+		customerGrade = "SILVER";  
+		bonusRatio = 0.01;         //1%
 	}
 	
 	public Customer(int customerID, String customerName) {
 		this.customerID = customerID;
 		this.customerName = customerName;
-		customerGrade = "SILVER";
-		bonusRatio = 0.01;
+		customerGrade = "SILVER";  
+		bonusRatio = 0.01; 
 	}
 
 	public int getCustomerID() {
@@ -37,12 +37,13 @@ public class Customer {
 	}
 	
 	public int calcPrice(int price) {
-		bonusPoint += price*bonusRatio;
+		//보너스 포인트 = 가격 x 보너스 적립율
+		bonusPoint += (int) (price * bonusRatio);
 		return price;
 	}
 	
 	public String showCustomerInfo() {
-		return customerName + " 님의 등급은 "+customerGrade+"이며, 보너스 포인트는 "
-				+bonusPoint+"입니다.";
+		return customerName + " 님의 등급은 " + customerGrade + "이며, 보너스 포인트는 "
+				+ bonusPoint + "점 입니다.";
 	}
 }
