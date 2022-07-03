@@ -1,6 +1,6 @@
 package finalex;
 
-public class SportsCar extends Car {
+/*public class SportsCar extends Car {
    
 	@Override
 	public void speedUp() {
@@ -12,4 +12,4 @@ public class SportsCar extends Car {
 //		speed = 0;
 //	}
 	
-}
+}*/

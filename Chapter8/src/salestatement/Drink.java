@@ -1,9 +1,9 @@
 package salestatement;
 
 public class Drink {
-	String name;  //상품명
-	int price;    //가격
-	int count;    //수량
+	protected String name;  //상품명
+	protected int price;    //가격
+	protected int count;    //수량
 	
 	Drink(String name, int price, int count){
 		this.name = name;

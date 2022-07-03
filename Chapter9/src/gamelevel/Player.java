@@ -1,7 +1,8 @@
 package gamelevel;
 
 public class Player {
-	private PlayerLevel level;
+	
+	private PlayerLevel level;  // 객체 참조
 	
 	public Player() {
 		level = new BeginnerLevel();
@@ -12,7 +13,7 @@ public class Player {
 		return level;
 	}
 	
-	public void upgradeLevel(PlayerLevel level) {
+	public void upgradeLevel(PlayerLevel level) {  //매개변수의 다형성
 		this.level = level;
 		level.showLevelMessage();
 	}

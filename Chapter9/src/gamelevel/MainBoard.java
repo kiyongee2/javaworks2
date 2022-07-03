@@ -3,6 +3,7 @@ package gamelevel;
 public class MainBoard {
 
 	public static void main(String[] args) {
+		
 		Player player = new Player();
 		player.play(1);
 		

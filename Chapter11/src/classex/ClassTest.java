@@ -18,8 +18,8 @@ public class ClassTest {
 		Class pClass3 = Class.forName("classex.Person");
 		System.out.println(pClass3.getName());
 		
-		Class strClass2 = Class.forName("java.lang.String2");
-		System.out.println(strClass.getName());
+		Class strClass2 = Class.forName("java.lang.String");
+		System.out.println(strClass2.getName());
 		
 		System.out.println("*********생성자 정보************");
 		Constructor[] cons = pClass.getConstructors();

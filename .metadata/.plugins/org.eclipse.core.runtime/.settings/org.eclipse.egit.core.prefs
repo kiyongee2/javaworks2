@@ -1,4 +1,4 @@
-GitRepositoriesView.GitDirectories=D\:\\javaWorks\\.git;D\:\\javaWorks\\BankApp\\.git;
-GitRepositoriesView.GitDirectories.relative=.git;BankApp\\.git;
+GitRepositoriesView.GitDirectories=D\:\\javaWorks\\.git;C\:\\Dev\\jwspring\\board\\.git;C\:\\Dev\\jwspring\\BootBoard\\.git;D\:\\javaWorks\\BankApp\\.git;C\:\\Dev\\jwspring\\myboard\\.git;
+GitRepositoriesView.GitDirectories.relative=.git;C\:\\Dev\\jwspring\\board\\.git;C\:\\Dev\\jwspring\\BootBoard\\.git;BankApp\\.git;C\:\\Dev\\jwspring\\myboard\\.git;
 core_autoIgnoreDerivedResources=false
 eclipse.preferences.version=1
