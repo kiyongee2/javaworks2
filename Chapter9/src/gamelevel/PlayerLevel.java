@@ -10,9 +10,11 @@ public abstract class PlayerLevel {
 	
 	public abstract void showLevelMessage();
 	
+	//템플릿 메서드 (일련의 순서)
 	public final void go(int count) {
 		run();
-		for(int i=0; i<count; i++) {
+		jump();
+		for(int i=1; i<=count; i++) {
 			jump();
 		}
 		turn();

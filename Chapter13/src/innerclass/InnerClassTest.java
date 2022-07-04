@@ -25,7 +25,7 @@ class OutClass{
 	}
 }
 
-public class InnerClassTest {
+public class InnerClassTest{
 
 	public static void main(String[] args) {
 		OutClass outClass = new OutClass();

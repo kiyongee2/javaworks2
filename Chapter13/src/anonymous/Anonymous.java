@@ -1,8 +1,8 @@
 package anonymous;
 
 public class Anonymous {
+	
 	Person field = new Person() {  //익명 자식 객체
-		String studentNo;
 		void work() {
 			System.out.println("출근합니다.");
 		}
@@ -15,7 +15,6 @@ public class Anonymous {
 	
 	void method1() {
 		Person localVar = new Person() {
-			String studentNo;
 			void walk() {
 				System.out.println("산책합니다.");
 			}

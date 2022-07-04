@@ -9,10 +9,6 @@ public class Player {
 		level.showLevelMessage();
 	}
 	
-	public PlayerLevel getLevel() {
-		return level;
-	}
-	
 	public void upgradeLevel(PlayerLevel level) {  //매개변수의 다형성
 		this.level = level;
 		level.showLevelMessage();

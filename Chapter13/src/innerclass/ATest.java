@@ -1,30 +1,22 @@
 package innerclass;
 
 class A{
-	A(){
-		System.out.println("A °´Ã¼°¡ »ý¼ºµÊ");
-	}
+	A(){System.out.println("A °´Ã¼°¡ »ý¼ºµÊ");}
 	
 	// ÀÎ½ºÅÏ½º ¸â¹ö Å¬·¡½º
 	class B{
-		B(){
-			System.out.println("B °´Ã¼°¡ »ý¼ºµÊ");
-		}
+		B(){System.out.println("B °´Ã¼°¡ »ý¼ºµÊ");}
 	}
 	
 	//Á¤Àû ¸â¹ö Å¬·¡½º
 	static class C{
-		C(){
-			System.out.println("C °´Ã¼°¡ »ý¼ºµÊ");
-		}
+		C(){System.out.println("C °´Ã¼°¡ »ý¼ºµÊ");}
 	}
 	
 	//local Å¬·¡½º(method()¸¦ È£ÃâÇÒ¶§¸¸ ½ÇÇà)
 	void method() {
 		class D{
-			D(){
-				System.out.println("D °´Ã¼°¡ »ý¼ºµÊ");
-			}
+			D(){System.out.println("D °´Ã¼°¡ »ý¼ºµÊ");}
 		}
 		D d = new D();
 	}

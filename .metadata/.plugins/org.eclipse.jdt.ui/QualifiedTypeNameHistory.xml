@@ -16,4 +16,8 @@
     <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="protectedex.pack1.A"/>
     <fullyQualifiedTypeName name="java.lang.Override"/>
+    <fullyQualifiedTypeName name="java.lang.ArithmeticException"/>
+    <fullyQualifiedTypeName name="interfaceex.remotecontrol.RemoteControl"/>
+    <fullyQualifiedTypeName name="chap08.DataAccessObject"/>
+    <fullyQualifiedTypeName name="anonymous.RemoteControl"/>
 </qualifiedTypeNameHistroy>

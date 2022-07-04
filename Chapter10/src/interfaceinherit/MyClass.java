@@ -1,6 +1,7 @@
 package interfaceinherit;
 
 public class MyClass implements MyInterface{
+	
 	@Override
 	public void x() {
 		System.out.println("x()");	
@@ -17,6 +18,7 @@ public class MyClass implements MyInterface{
 	}
 	
 	public static void main(String[] args) {
+		//자동 타입 변환
 		MyClass myClass = new MyClass();
 		X x = myClass;
 		x.x();
@@ -24,7 +26,9 @@ public class MyClass implements MyInterface{
 		Y y = myClass;
 		y.y();
 		
-		MyInterface iClass = myClass; //현재 바인딩된 인스턴스인 myClass의 메서드가 불림.
+		//X와 Y를 상속한 iClass 객체 생성
+		System.out.println("** 다중 상속한 iClass 출력 **");
+		MyInterface iClass = myClass; 
 		iClass.myMethod();
 		iClass.x();
 		iClass.y();
