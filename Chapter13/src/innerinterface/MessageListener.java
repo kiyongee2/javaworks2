@@ -6,4 +6,5 @@ public class MessageListener implements Button.OnClickListner{
 	public void onClick() {
 		System.out.println("문자를 보냅니다.");
 	}
+
 }

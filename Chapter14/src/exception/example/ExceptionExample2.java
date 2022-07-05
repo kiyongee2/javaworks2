@@ -9,6 +9,7 @@ public class ExceptionExample2 {
 		num[1] = 2;
 		num[2] = 3;
 		
+		//ArrayIndexOutOfBoundsException
 		System.out.println("¿Ï·á");
 	}
 }

@@ -1,8 +1,9 @@
-package innerclass;
+package innerclass2;
+
 
 class OutClass{
-	private int num = 10;
-	private static int sNum = 20;
+	int num = 10;
+	static int sNum = 20;
 	
 	private InClass inClass;   //내부 클래스 자료형 변수 
 	

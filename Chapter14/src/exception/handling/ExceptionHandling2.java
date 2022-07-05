@@ -7,11 +7,18 @@ public class ExceptionHandling2 {
 
 	public static void main(String[] args) {
 		try {
-			FileInputStream fis = new FileInputStream("a.txt");
-		} catch (FileNotFoundException e) {
-			//e.printStackTrace();
+		String data = null;
+		//System.out.println(data.toString()); //NullPointerException 발생
+		
+		String data1 = "100";
+		String data2 = "a200";
+		
+		int value1 = Integer.parseInt(data1);
+		int value2 = Integer.parseInt(data2); //NumberFormatException 발생
+		}catch(NullPointerException e) {
+			System.out.println(e);
+		}catch(NumberFormatException e) {
 			System.out.println(e);
 		}
-		System.out.println("여기도 수행됩니다.");
 	 }
 }

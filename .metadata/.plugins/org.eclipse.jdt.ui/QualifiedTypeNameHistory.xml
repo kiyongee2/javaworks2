@@ -20,4 +20,11 @@
     <fullyQualifiedTypeName name="interfaceex.remotecontrol.RemoteControl"/>
     <fullyQualifiedTypeName name="chap08.DataAccessObject"/>
     <fullyQualifiedTypeName name="anonymous.RemoteControl"/>
+    <fullyQualifiedTypeName name="innerclass.A.C"/>
+    <fullyQualifiedTypeName name="innerclass.Student.Score"/>
+    <fullyQualifiedTypeName name="innerclass.OutClass.InClass"/>
+    <fullyQualifiedTypeName name="innerclass2.Button.OnClickListner"/>
+    <fullyQualifiedTypeName name="innerinterface.Button.OnClickListner"/>
+    <fullyQualifiedTypeName name="java.lang.NumberFormatException"/>
+    <fullyQualifiedTypeName name="java.lang.ArrayIndexOutOfBoundsException"/>
 </qualifiedTypeNameHistroy>

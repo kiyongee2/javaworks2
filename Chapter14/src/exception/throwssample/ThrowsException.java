@@ -1,25 +1,17 @@
 package exception.throwssample;
 
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-
 public class ThrowsException {
 	
-	public Class loadClass(String fileName, String className) throws FileNotFoundException, ClassNotFoundException {
-		FileInputStream fis = new FileInputStream(fileName);
-		Class c = Class.forName(className);
-		return c;
+	public static void main(String[] args) {
+		try {
+			//호출하는 쪽에서 try ~ catch 처리
+			findClass();  
+		} catch (ClassNotFoundException e) {
+			System.out.println("클래스가 존재하지 않습니다.");
+		}
 	}
 	
-	public static void main(String[] args) {
-		ThrowsException ex = new ThrowsException();
-		try {
-			ex.loadClass("c.txt", "java.lang.String2");
-		} catch (FileNotFoundException e) {
-			System.out.println(e);
-		} catch (ClassNotFoundException e) {
-			System.out.println(e);
-		}
-		System.out.println("end");
+	public static void findClass() throws ClassNotFoundException {
+		Class cls = Class.forName("java.lang.String2");
 	}
 }

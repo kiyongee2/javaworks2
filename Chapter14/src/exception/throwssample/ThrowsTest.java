@@ -2,7 +2,7 @@ package exception.throwssample;
 
 class ArrayUtil {
 	public void call() throws Exception {
-		//System.out.println("call 메서드 시작");
+		System.out.println("call 메서드 시작");
 		int[] num = new int[2];
 		num[0] = 1;
 		num[1] = 2;

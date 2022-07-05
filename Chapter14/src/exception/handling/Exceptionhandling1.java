@@ -1,6 +1,6 @@
 package exception.handling;
 
-public class exceptionhandling1 {
+public class Exceptionhandling1 {
 
 	public static void main(String[] args) {
 		try {
@@ -17,3 +17,4 @@ public class exceptionhandling1 {
 		System.out.println("Done");
 	 }
 }
+

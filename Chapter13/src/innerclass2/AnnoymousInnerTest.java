@@ -1,4 +1,4 @@
-package innerclass;
+package innerclass2;
 
 class Outer2{
 	Runnable getRunnable(int i) {
