@@ -1,4 +1,4 @@
-package classex;
+package classexam;
 
 public class Person {
 	String name;

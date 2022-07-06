@@ -1,60 +1,23 @@
 package object;
 
-class Student{
-	int studentId;
-	String studentName;
-	
-	Student(int studentID, String studentName){
-		this.studentId = studentID;
-		this.studentName = studentName;
-	}
-
-	@Override
-	public boolean equals(Object obj) {
-		if(obj instanceof Student) {
-			Student std = (Student)obj;
-			if(this.studentId == std.studentId)
-				return true;
-			else
-				return false;
-		}
-		return false;
-	}
-
-	@Override
-	public int hashCode() {
-		return studentId;
-	}
-}
-
 public class EqualsTest {
 	public static void main(String[] args) {	
-		Student studentLee = new Student(100, "이강인");
-		Student studentLee2 = studentLee;
-		Student studentKang = new Student(100, "이강인");
+		//equals() 테스트
+		String name1 = new String("장그래");
+		String name2 = new String("장그래");
+		System.out.println(name1 == name2);
+		System.out.println(name1.equals(name2));
 		
-		if(studentLee == studentLee2)
-			System.out.println("studentLee와 studentLee2의 주소는 같습니다.");
-		else
-			System.out.println("studentLee와 studentLee2의 주소는 다릅니다.");
-		
-		if(studentLee.equals(studentLee2))
-			System.out.println("studentLee와 studentLee2은 동일합니다.");
-		else
-			System.out.println("studentLee와 studentLee2은 동일하지 않습니다.");
-		
-		if(studentLee == studentKang)
-			System.out.println("studentLee와 studentKang의 주소는 같습니다.");
-		else
-			System.out.println("studentLee와 studentKang의 주소는 다릅니다.");
-		
-		if(studentLee.equals(studentKang))
-			System.out.println("studentLee와 studentKang은 동일합니다.");
-		else
-			System.out.println("studentLee와 studentKang은 동일하지 않습니다.");
+		Book book1 = new Book(100, "미생");
+		Book book2 = new Book(100, "미생");
+		System.out.println(book1 == book2);
+		System.out.println(book1.equals(book2));
 		
 		System.out.println("****hash()코드 테스트******");
-		System.out.println("studentLee의 hashCode: " + studentLee.hashCode());
-		System.out.println("studentKang의 hashCode: " + studentKang.hashCode());
+		System.out.println(name1.hashCode());
+		System.out.println(name2.hashCode());
+		
+		System.out.println(book1.hashCode());
+		System.out.println(book2.hashCode());
 	}
 }

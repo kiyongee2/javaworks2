@@ -11,12 +11,18 @@ public class WrapperTest2 {
 		//valueOf() 정적 메서드는 정수나 문자열을 Integer로 반환
 		Integer number1 = Integer.valueOf("200"); 
 		Integer number2 = Integer.valueOf(200);
-		System.out.println("number1 :"+number1+", "+"number2 :"+number2);
+		System.out.println("number1:" + number1 +", " + "number2:" + number2);
 		
 		//parseInt() 정적 메서드는 문자열에서 int값을 가져와서 반환
 		int num = Integer.parseInt("1000"); 
 		System.out.println(num);
-
+		
+		int data = 150;
+		String strData = String.valueOf(data);
+		System.out.println(strData);
+		
+		Integer obj1 = 127;
+		Integer obj2 = 127;
+		System.out.println(obj1 == obj2); //false
 	}
-
 }

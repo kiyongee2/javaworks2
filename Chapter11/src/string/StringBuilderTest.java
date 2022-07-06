@@ -3,6 +3,7 @@ package string;
 public class StringBuilderTest {
 
 	public static void main(String[] args) {
+		
 		String javaStr = new String("Java");
 		System.out.println("javaStr 문자열 주소 : " + System.identityHashCode(javaStr));
 		

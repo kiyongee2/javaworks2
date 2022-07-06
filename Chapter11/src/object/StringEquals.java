@@ -15,10 +15,10 @@ public class StringEquals {
 		System.out.println(i1==i2);
 		System.out.println(i1.equals(i2));
 		
-		Student std1 = new Student(10001, "¼ÕÈï¹Î");
+		/*Student std1 = new Student(10001, "¼ÕÈï¹Î");
 		Student std2 = new Student(10001, "¼ÕÈï¹Î");
 		
 		System.out.println(std1==std2);
-		System.out.println(std1.equals(std2));	//ÀçÁ¤ÀÇ ÇÏ¸é ³í¸®ÀûÀ¸·Î °°¾ÆÁü.
+		System.out.println(std1.equals(std2));	//ÀçÁ¤ÀÇ ÇÏ¸é ³í¸®ÀûÀ¸·Î °°¾ÆÁü.*/
 	}
 }
