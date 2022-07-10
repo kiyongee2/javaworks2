@@ -5,7 +5,7 @@ import java.util.Vector;
 
 public class Typing {
 	
-	Vector words = new Vector();
+	Vector<String> words = new Vector<>();
 	int interval = 3 * 1000;
 	String[] data = {"bear", "cat", "dog", "eagle", "monkey", "tiger"};
 	WordGenerator wg = new WordGenerator();
@@ -14,14 +14,14 @@ public class Typing {
 		Typing typing = new Typing();
 		typing.wg.start();
 		
-		Vector words = typing.words;
+		Vector<String> words = typing.words;
+		Scanner sc = new Scanner(System.in);
 		System.out.println("준비되면 엔터");
 		while(true) {
 			System.out.println(words);
 			String prompt = ">>";
 			System.out.println(prompt);
 			
-			Scanner sc = new Scanner(System.in);
 			String input = sc.nextLine().trim();
 			int index = words.indexOf(input);
 			
