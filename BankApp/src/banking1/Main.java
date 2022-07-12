@@ -40,34 +40,36 @@ public class Main {
 	    System.out.println("-------");
 	    
 	    //계좌번호(기본키) 중복 문제
-	    System.out.println("계좌 번호 :");
-	    String ano = scanner.next();
-	    if(findAccount(ano) != null) {
-	    	System.out.println("중복 계좌입니다. 다시 입력하세요");
-	    	System.out.println("계좌 번호 :");
-		    ano = scanner.next();
-	    }
-		    
-	    System.out.println("계좌주 : ");
-	    String owner = scanner.next();
-	    
-	    //초기 입금액 100원 이상 설정
-	    System.out.println("초기 입금액 : ");
-	    int balance = scanner.nextInt();
-	    if(balance < 100) {
-	    	System.out.println("기본 입금액은 100원 이상입니다. 다시 입력하세요");
-	    	System.out.println("초기 입금액 : ");
-		    balance = scanner.nextInt();
-	    }
-	    
-	    Account newAccount = new Account(ano, owner, balance); //계좌 생성
-	    for(int i=0; i<accountArray.length; i++) {
-	    	if(accountArray[i] == null) {
-	    		accountArray[i] = newAccount;
-	    		System.out.println("결과 : 계좌가 생성되었습니다.");
-	    		break;
-	    	}
-	    }
+	    while(true) {
+		    System.out.println("계좌 번호 :");
+		    String ano = scanner.next();
+		    if(findAccount(ano) != null) {
+		    	System.out.println("중복 계좌입니다. 다시 입력하세요");
+		    }else {
+			    System.out.println("계좌주 : ");
+			    String owner = scanner.next();
+			    
+			    //초기 입금액 100원 이상 설정
+			    while(true) {
+				    System.out.println("초기 입금액 : ");
+				    int balance = scanner.nextInt();
+				    if(balance < 100) {
+				    	System.out.println("기본 입금액은 100원 이상입니다. 다시 입력하세요");
+				    }else {
+					    Account newAccount = new Account(ano, owner, balance); //계좌 생성
+					    for(int i=0; i<accountArray.length; i++) {
+					    	if(accountArray[i] == null) {
+					    		accountArray[i] = newAccount;
+					    		System.out.println("결과 : 계좌가 생성되었습니다.");
+					    		break;
+					    	}
+					    }
+					    break;
+				    } 
+			    }//안쪽 while 닫기
+		    }
+		    break;
+	    }//바깥쪽 while 닫기
 	}
 	
 	private static void accountList() {
@@ -90,24 +92,24 @@ public class Main {
 	    System.out.println("예금");
 	    System.out.println("-------");
 	    
-    	System.out.println("계좌 번호 :");
-	    String ano = scanner.next();
-	    if(findAccount(ano) == null) {
-	    	System.out.println("계좌가 없습니다. 다시 입력하세요");	
-	    	System.out.println("계좌 번호 :");
-		    ano = scanner.next();
-	    }
-	    
-	    Account account = findAccount(ano);   //계좌 객체 생성
-	    
 	    while(true) {
-		    System.out.println("입금액 :");
-		    int money = scanner.nextInt();
-		    if(money < 0) {
-		    	System.out.println("잘못된 입력입니다. 다시 입력하세요");
+	    	System.out.println("계좌 번호 :");
+		    String ano = scanner.next();
+		    if(findAccount(ano) == null) {
+		    	System.out.println("계좌가 없습니다. 다시 입력하세요");	
 		    }else {
-		    	account.setBalance(account.getBalance() + money);
-		    	System.out.printf("%,d원 정상 입금되었습니다.\n", money);
+			    Account account = findAccount(ano);   //계좌 객체 생성
+			    while(true) {
+				    System.out.println("입금액 :");
+				    int money = scanner.nextInt();
+				    if(money < 0) {
+				    	System.out.println("잘못된 입력입니다. 다시 입력하세요");
+				    }else {
+				    	account.setBalance(account.getBalance() + money);
+				    	System.out.printf("%,d원 정상 입금되었습니다.\n", money);
+					    break;
+				    }
+			    }
 			    break;
 		    }
 	    }
@@ -118,25 +120,26 @@ public class Main {
 	    System.out.println("출금");
 	    System.out.println("-------");
 	    
-	    System.out.println("계좌 번호 :");
-	    String ano = scanner.next();
-	    if(findAccount(ano) == null) {
-	    	System.out.println("계좌가 없습니다. 다시 입력하세요");	
-	    	System.out.println("계좌 번호 :");
-		    ano = scanner.next();
-	    }
-		    
-	    Account account = findAccount(ano);
 	    while(true) {
-	    	System.out.println("출금액 :");
-		    int money = scanner.nextInt();
-		    if(money > account.getBalance()) {
-		    	System.out.println("잔액이 부족합니다. 다시 입력하세요");
-		    }else if(money < 0) {
-		    	System.out.println("잘못된 입력입니다. 다시 입력하세요");
+		    System.out.println("계좌 번호 :");
+		    String ano = scanner.next();
+		    if(findAccount(ano) == null) {
+		    	System.out.println("계좌가 없습니다. 다시 입력하세요");	
 		    }else {
-		    	account.setBalance(account.getBalance() - money);
-		    	System.out.printf("%,d원 정상 출금되었습니다.\n", money);
+			    Account account = findAccount(ano);
+			    while(true) {
+			    	System.out.println("출금액 :");
+				    int money = scanner.nextInt();
+				    if(money > account.getBalance()) {
+				    	System.out.println("잔액이 부족합니다. 다시 입력하세요");
+				    }else if(money < 0) {
+				    	System.out.println("잘못된 입력입니다. 다시 입력하세요");
+				    }else {
+				    	account.setBalance(account.getBalance() - money);
+				    	System.out.printf("%,d원 정상 출금되었습니다.\n", money);
+					    break;
+				    }
+			    }
 			    break;
 		    }
 	    }
