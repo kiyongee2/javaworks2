@@ -14,7 +14,7 @@ public class FileWriterTest {
 			fw.write(buf, 1, 2);
 			fw.write(10);
 			fw.write(100);
-			int num = 20;
+			int num = 48;
 			fw.write(num);   //코드값이 출력됨
 			//fw.write(3.14);   //정수나 실수는 사용할 수 없음
 		} catch (IOException e) {

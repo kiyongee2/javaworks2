@@ -6,7 +6,8 @@ public class BeepPrintTest3 {
 
 	public static void main(String[] args) {
 		//Runnable ÀÍ¸í °´Ã¼ ÀÌ¿ë
-	    Thread thread = new Thread(new Runnable() {
+		Thread thread = new Thread(new Runnable() {
+
 			@Override
 			public void run() {
 				Toolkit toolkit = Toolkit.getDefaultToolkit();
@@ -19,8 +20,8 @@ public class BeepPrintTest3 {
 					}
 				}
 			}
-	    });
-	    thread.start();
+		});
+		thread.start();
 	    
 	    for(int i=0; i<5; i++) {
 			System.out.println("¶ò");

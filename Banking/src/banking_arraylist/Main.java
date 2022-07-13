@@ -13,9 +13,9 @@ public class Main {
 		boolean run = true;
 		
 		while(run) {
-			System.out.println("-------------------------------------------");
-			System.out.println("1.계좌생성 | 2.계좌목록 | 3.예금 | 4.출금 | 5.종료");
-			System.out.println("-------------------------------------------");
+			System.out.println("------------------------------------------------------------------");
+			System.out.println("1.계좌생성 | 2.계좌목록 | 3.예금 | 4.출금 | 5.계좌검색 | 6.계좌삭제 | 7.종료");
+			System.out.println("------------------------------------------------------------------");
 			System.out.print("선택> ");
 			
 			String selectNo = scanner.next();
@@ -28,6 +28,10 @@ public class Main {
 			}else if(selectNo.equals("4")) {
 				withdraw();          //출금
 			}else if(selectNo.equals("5")) {
+				viewAccount();          //계좌 검색
+			}else if(selectNo.equals("6")) {
+				removeAccount();        //계좌 삭제
+			}else if(selectNo.equals("7")) {
 				run = false;         //종료
 			}else {
 				System.out.println("지원되지 않는 기능입니다.");
@@ -146,6 +150,54 @@ public class Main {
 			}
 		}
 	}
+	
+	//계좌 1개 보기
+	private static void viewAccount() {
+		System.out.println("--------------------------");
+		System.out.println("계좌 검색");
+		System.out.println("--------------------------");
+		
+		while(true) {
+			System.out.println("계좌 번호: ");
+			String ano = scanner.next();
+			
+			//입력한 계좌가 없을때 처리
+			if(findAccount(ano) == null) {
+				System.out.println("계좌가 없습니다. 다시 입력하세요");
+			}else {
+				Account account = findAccount(ano);
+				
+				System.out.print("계좌번호: " + account.getAno() + "\t");
+				System.out.print("계좌주: " + account.getOwner() + "\t");
+				System.out.println("잔액: " + account.getBalance());
+				break;
+			}
+		}
+	}
+	
+	//계좌 삭제
+	private static void removeAccount() {
+		System.out.println("--------------------------");
+		System.out.println("계좌 삭제");
+		System.out.println("--------------------------");
+		
+		while(true) {
+			System.out.println("계좌 번호: ");
+			String ano = scanner.next();
+			
+			//입력한 계좌가 없을때 처리
+			if(findAccount(ano) == null) {
+				System.out.println("계좌가 없습니다. 다시 입력하세요");
+			}else {
+				Account account = findAccount(ano);
+				
+				accountArrayList.remove(account);
+				System.out.println("결과: 계좌가 삭제되었습니다.");
+				break;
+			}
+		}
+	}
+	
 	
 	//계좌 찾기
 	private static Account findAccount(String ano) {

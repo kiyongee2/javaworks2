@@ -5,6 +5,7 @@ import java.awt.Toolkit;
 public class BeepPrintTest4 {
 
 	public static void main(String[] args) {
+
 		//람다식 이용
 		Thread thread = new Thread(()->{
 			Toolkit toolkit = Toolkit.getDefaultToolkit();
