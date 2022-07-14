@@ -14,7 +14,7 @@ public class WriteSample3 {
 		
 		byte[] array = new byte[] {10, 20, 30, 40, 50};
 		
-		os.write(array, 1, 3);
+		os.write(array, 1, 3);  //1번 인덱스부터 3개 쓰기
 		
 		os.flush();
 		os.close();
