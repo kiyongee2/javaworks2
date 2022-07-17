@@ -1,10 +1,6 @@
 package thread;
 
 public class ThreadB extends Thread{
-	
-	public ThreadB() {
-		setName("ThreadB");
-	}
 
 	@Override
 	public void run() {

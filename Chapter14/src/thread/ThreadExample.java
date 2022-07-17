@@ -14,5 +14,4 @@ public class ThreadExample {
 		System.out.println("작업 스레드 이름: " + threadB.getName());
 		threadB.start();
 	}
-
 }

@@ -1,0 +1,1 @@
+ant bear chicken cat cow dog dove eagle elephant horse monkey lion tiger pig
